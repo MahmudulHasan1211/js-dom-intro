@@ -1,1 +1,2 @@
-console.log('hello from js')
+console.log('Hello DOM')
+console.log(document.body)

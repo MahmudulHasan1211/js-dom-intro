@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Tour of DOM</title>
 </head>
+
 <body>
     <header>
         <h2>
-            This is a Header 
+            This is a Header
         </h2>
     </header>
 
     <main>
         <h2>
-            This is another Header 
+            This is another Header
         </h2>
 
         <ul>
-                <li>Mahmudul</li>
-                <li>Hasan</li>
-                <li>Molla</li>
+            <li>Mahmudul</li>
+            <li>Hasan</li>
+            <li>Molla</li>
         </ul>
     </main>
     <script src="Dom.js"></script>
+    <!-- js inside the html file  -->
+    <script>
+        console.log('Hello from html file')
+        const student = {
+            name: 'hasan',
+            id: 172,
+
+            study: function (time) {
+                console.log(time, 'study kortese')
+            }
+        }
+        const liItems = document.getElementsByTagName('li')
+        console.log(liItems)
+
+        for (const li of liItems) {
+            console.log(li.innerText)
+        }
+
+        const aHeader = document.getElementsByTagName('h2')
+        for (const allHead of aHeader) {
+            console.log(allHead.innerText)
+        }
+    </script>
 </body>
+
 </html>
