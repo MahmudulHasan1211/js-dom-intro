@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Tour of DOM</title>
+    <style>
+        #first-header{
+            color: orange;
+        }
+        .places{
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h2>
+        <h2 id="first-header">
             This is a Header
         </h2>
     </header>
@@ -20,9 +28,9 @@
             This is another Header
         </h2>
 
-        <ul>
-            <li>Mahmudul</li>
-            <li>Hasan</li>
+        <ul class="nio">
+            <li class="places">Mahmudul</li>
+            <li class="places">Hasan</li>
             <li>Molla</li>
         </ul>
     </main>
@@ -41,6 +49,7 @@
         const liItems = document.getElementsByTagName('li')
         console.log(liItems)
 
+        // another way using for-of loop 
         for (const li of liItems) {
             console.log(li.innerText)
         }
@@ -48,6 +57,20 @@
         const aHeader = document.getElementsByTagName('h2')
         for (const allHead of aHeader) {
             console.log(allHead.innerText)
+        }
+        const places = document.getElementsByClassName('places')
+        for (const place of places){
+            console.log(place.innerText)
+        }
+        const title = document.getElementById('first-header')
+        title.innerText = 'changed title';
+
+
+        // query selector all 
+        const someLi = document.querySelectorAll('.nio')
+        console.log(someLi);
+        for (const li of someLi){
+            console.log(li.innerText);
         }
     </script>
 </body>
